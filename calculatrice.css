@@ -8,3 +8,26 @@
 	text-align:right;
 	font-family:System,sans-serif;
 	font-size:100%; }
+
+	
+body{
+background:url('fond.png') no-repeat;
+background-size: cover; 
+margin:0;
+padding:0;
+}
+	
+	
+
+fieldset{
+text-align:center;
+border-radius: 5px;
+border: 2px #FFFFFF solid;
+}
+
+textarea{
+text-align:center;
+border-radius: 10px;
+border: 1px #FFFFFF solid;
+background-color: transparent;
+}
