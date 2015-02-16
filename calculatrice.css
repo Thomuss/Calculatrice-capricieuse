@@ -2,22 +2,48 @@
 	width:60px; 
 	text-align:center;
 	font-family:System,sans-serif;
-	font-size:100%; }
+	font-size:100%;
+	border: 5px ridge;
+	border-radius: 10px;
+}
 .affiche { 
-	width:100%; 
-	text-align:right;
+	width:100%;
+	text-align:center;
 	font-family:System,sans-serif;
-	font-size:100%; }
+	border: 2px outset;
+	border-radius: 10px;
+}
+
+div{
+	position:fixed;
+	margin-left: 25%;
+}
+
+form{
+	border: 3px outset;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+body {
+	margin: 20;
+	background-image: url("BG.PNG");
+	position: absolute;
+	background-position: center; 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
 
 fieldset{
-text-align:center;
-border-radius: 5px;
-border: 2px #FFFFFF solid;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px #FFFFFF outset;
 }
 
 textarea{
-text-align:center;
-border-radius: 10px;
-border: 1px #FFFFFF solid;
-background-color: transparent;
+	text-align:center;
+	border-radius: 10px;
+	border: 1px #FFFFFF solid;
+	background-color: transparent;
 }

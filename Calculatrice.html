@@ -8,49 +8,50 @@
 <script type="text/javascript" src="calculatrice.js"></script>
 </head>
 
-<body bgcolor="#D8D8D8">
-<form name="calculatrice" onSubmit="resultat();return false;">
-<table border="3" cellpadding="10" cellspacing="25">
+<body>
+<div><form name="calculatrice" onSubmit="resultat();return false;">
+<table >
 <tr>
-<td bgcolor="#6C6C6c">
-<input type="text" name="affiche" align="right" class="affiche"></td>
+<td>
+<input type="text" name="affiche" class="affiche" readonly></td>
 </tr><tr>
-<td  bgcolor="#6C6C6C">
-<table border="0.3" cellpadding="0" cellspacing="0.5">
+<td class="td1">
+<table>
 <tr>
-<td><input type="button" width="120" class="button" value="  +   " onClick="ajouter('+')"></td>
-<td><input type="button" width="60" class="button" value="  -   " onClick="ajouter('-')"></td>
-<td><input type="button" width="60" class="button" value="  *   " onClick="ajouter('*')"></td>
-<td><input type="button" width="60" class="button" value="  /   " onClick="ajouter('/')"></td>
+<td><input type="button" class="button" value="  +   " onClick="ajouter('+')"></td>
+<td><input type="button" class="button" value="  -   " onClick="ajouter('-')"></td>
+<td><input type="button" class="button" value="  *   " onClick="ajouter('*')"></td>
+<td><input type="button" class="button" value="  /   " onClick="ajouter('/')"></td>
 </tr>
 <tr>
-<td><input type="button" width="60" class="button" value="  7   " onClick="ajouter('7')"></td>
-<td><input type="button" width="60" class="button" value="  8   " onClick="ajouter('8')"></td>
-<td><input type="button" width="60" class="button" value="  9   " onClick="ajouter('9')"></td>
+<td><input type="button" class="button" value="  7   " onClick="ajouter('7')"></td>
+<td><input type="button" class="button" value="  8   " onClick="ajouter('8')"></td>
+<td><input type="button" class="button" value="  9   " onClick="ajouter('9')"></td>
 </tr>
 <tr>
-<td><input type="button" width="60" class="button" value="  4   " onClick="ajouter('4')"></td>
-<td><input type="button" width="60" class="button" value="  5   " onClick="ajouter('5')"></td>
-<td><input type="button" width="60" class="button" value="  6   " onClick="ajouter('6')"></td>
+<td><input type="button" class="button" value="  4   " onClick="ajouter('4')"></td>
+<td><input type="button" class="button" value="  5   " onClick="ajouter('5')"></td>
+<td><input type="button" class="button" value="  6   " onClick="ajouter('6')"></td>
 </tr>
 <tr>
-<td><input type="button" width="60" class="button" value="  1   " onClick="ajouter('1')"></td>
-<td><input type="button" width="60" class="button" value="  2   " onClick="ajouter('2')"></td>
-<td><input type="button" width="60" class="button" value="  3   " onClick="ajouter('3')"></td>
+<td><input type="button" class="button" value="  1   " onClick="ajouter('1')"></td>
+<td><input type="button" class="button" value="  2   " onClick="ajouter('2')"></td>
+<td><input type="button" class="button" value="  3   " onClick="ajouter('3')"></td>
 </tr>
 <tr>
-<td><input type="reset"  width="60" class="button" value="  C  "> </td>
-<td><input type="button" width="60" class="button" value="  0   " onClick="ajouter('0')"></td>
-<td><input type="button" width="60" class="button" value="  =   " onClick="resultat()"></td>
+<td><input type="reset" class="button" value="  C  "> </td>
+<td><input type="button" class="button" value="  0   " onClick="ajouter('0')"></td>
+<td><input type="button" class="button" value="  =   " onClick="resultat()"></td>
 </tr>
 </table>
 </td></tr></table>
-</form>
-<div class="Questions-Réponses"></div>
-	<fieldset>
-		<legend> Questions réponses : </legend>
-		<textarea id="questions" cols="90", rows="15"></textarea
-	</fieldset>
-
+</form></div>
+<!--
+<fieldset>
+	<div class="Questions-Réponses"></div>
+	<legend> Questions réponses : </legend>
+	<textarea id="questions" cols="90", rows="15"></textarea
+</fieldset>
+-->
 </body>
 </html>
