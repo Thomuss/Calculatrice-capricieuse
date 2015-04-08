@@ -9,8 +9,8 @@
 </head>
 
 <body>
-<div><form name="calculatrice" onSubmit="resultat();return false;">
-<table >
+<div class="calculatrice"><form name="calculatrice" onSubmit="resultat();return false;">
+<table>
 <tr>
 <td>
 <input type="text" name="affiche" class="affiche" readonly></td>
@@ -18,42 +18,41 @@
 <td class="td1">
 <table>
 <tr>
-<td><input type="button" class="button" value="  ?  " onClick="infos()"></td>
-<td><input type="button" class="button" value="  GO  " onClick="question()"></td>
+<td><input type="button" class="button" value="  ?  " onClick=infos();></td>
+<td colspan = "3"><input type="button" class="button" id="go" value="  Go  " onClick=initialisation();></td>
 </tr>
 <tr>
-<td><input type="button" class="button" value="  7   " onClick="ajouter('7')"></td>
-<td><input type="button" class="button" value="  8   " onClick="ajouter('8')"></td>
-<td><input type="button" class="button" value="  9   " onClick="ajouter('9')"></td>
-<td><input type="button" class="button" value="  +   " onClick="ajouter('+')"></td>
+<td><input type="button" id="bu7"  class="button" value="  7   " onClick=touches7();></td>
+<td><input type="button" id="bu8"  class="button" value="  8   " onClick=touches8();></td>
+<td><input type="button" id="bu9"  class="button" value="  9   " onClick=touches9();></td>
+<td><input type="button" id="bu10" class="button" value="  +   " onClick=touchespls();></td>
 </tr>
 <tr>
-<td><input type="button" class="button" value="  4   " onClick="ajouter('4')"></td>
-<td><input type="button" class="button" value="  5   " onClick="ajouter('5')"></td>
-<td><input type="button" class="button" value="  6   " onClick="ajouter('6')"></td>
-<td><input type="button" class="button" value="  -   " onClick="ajouter('-')"></td>
+<td><input type="button" id="bu4" class="button" value="  4   " onClick=touches4();></td>
+<td><input type="button" id="bu5" class="button" value="  5   " onClick=touches5();></td>
+<td><input type="button" id="bu6"class="button" value="  6   " onClick=touches6();></td>
+<td><input type="button" id="bu11"class="button" value="  -   " onClick=touchesmn();></td>
 </tr>
 <tr>
-<td><input type="button" class="button" value="  1   " onClick="ajouter('1')"></td>
-<td><input type="button" class="button" value="  2   " onClick="ajouter('2')"></td>
-<td><input type="button" class="button" value="  3   " onClick="ajouter('3')"></td>
-<td><input type="button" class="button" value="  *   " onClick="ajouter('*')"></td>
+<td><input type="button" id="bu1" class="button" value="  1   " onClick=touches1();></td>
+<td><input type="button" id="bu2"class="button" value="  2   " onClick=touches2();></td>
+<td><input type="button" id="bu3" class="button" value="  3   " onClick=touches3();></td>
+<td><input type="button" id="bu12"class="button" value="  *   " onClick=touchesx();></td>
 </tr>
 <tr>
-<td><input type="reset" class="button" value="  C  "> </td>
-<td><input type="button" class="button" value="  0   " onClick="ajouter('0')"></td>
-<td><input type="button" class="button" value="  =   " onClick="resultat()"></td>
-<td><input type="button" class="button" value="  /   " onClick="ajouter('/')"></td>
+<td><input type="reset" class="button" value="  C  "></td>
+<td><input type="button" id="bu14"class="button" value="  0   " onClick=touches0();></td>
+<td><input type="button" class="button" value="  =   "         onClick=resultat();></td>
+<td><input type="button" id="bu13"class="button" value="  /   " onClick=touchesdiv();></td>
 </tr>
 </table>
 </td></tr></table>
 </form></div>
-<!--
-<fieldset>
-	<div class="Questions-Réponses"></div>
-	<legend> Questions réponses : </legend>
-	<textarea id="questions" cols="90", rows="15"></textarea
-</fieldset>
--->
+<div class="QR">
+	<fieldset>
+		<legend class="leg"> Questions : </legend>
+		<div class="quest" id="question"></div>
+	</fieldset>
+</div>
 </body>
 </html>

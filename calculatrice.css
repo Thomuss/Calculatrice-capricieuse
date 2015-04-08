@@ -1,3 +1,8 @@
+.QR {
+	position:absolute;
+	left: 600px;
+}
+
 .button {
 	width:60px; 
 	text-align:center;
@@ -6,6 +11,7 @@
 	border: 5px ridge;
 	border-radius: 10px;
 }
+
 .affiche { 
 	width:100%;
 	text-align:center;
@@ -14,9 +20,9 @@
 	border-radius: 10px;
 }
 
-div{
-	position:fixed;
-	margin-left: 25%;
+.calculatrice{
+	position:absolute;
+	left: 300px;
 }
 
 form{
@@ -35,15 +41,17 @@ body {
 	background-attachment: fixed;
 }
 
-fieldset{
+.leg{
 	text-align: center;
-	border-radius: 5px;
 	border: 2px #FFFFFF outset;
+	border-radius: 1px;
 }
 
-textarea{
-	text-align:center;
-	border-radius: 10px;
-	border: 1px #FFFFFF solid;
+.quest{
+	height: 25px;
+	width: 500px;
+	text-align: center;
+	border: 2px #FFFFFF outset;
+	border-radius: 1px;
 	background-color: transparent;
 }
