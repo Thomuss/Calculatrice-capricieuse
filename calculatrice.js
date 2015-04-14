@@ -17,41 +17,52 @@ for (var k=1; k < 15; k++){
 * @param y           Valeur du resultat à obtenir.
 * @param go          Permet de vérifier que le questionnaire à commencer.
 * @param Numero      Numero de la question.
-* @param test        Valeur du résultat.
+* @param test        Valeur du résultat. Test aussi si il y a une valeur.
 * @param test.length Test le nombre de caractére du résultat.
 * @return le résulat et vrai(true) ou faux (false).
 */
 function resultat() {
-var x = 0;
-var test = window.document.calculatrice.affiche.value;
-x = eval(window.document.calculatrice.affiche.value);
-window.document.calculatrice.affiche.value = x;
-if (x == y && go==true && test.length > 2){
-	alert("Bravo");
-	Numero = Numero + 1;
-	question(Numero);
-	window.document.calculatrice.affiche.value = "";
-} else {
-if (go == true && test.length < 3 && x == y){
-	alert("Tu ne peut pas écrire le résultat directement");
-	window.document.calculatrice.affiche.value = "";
-} else {	
-if (go == true){
-	alert("Faux");
-	window.document.calculatrice.affiche.value = "";
-} else {
-}}}}
+	var x = 0;
+	var test = window.document.calculatrice.affiche.value;
+	if (test != "") {
+		x = eval(window.document.calculatrice.affiche.value);
+		window.document.calculatrice.affiche.value = x;
+		if (x == y && go==true && test.length > 2){
+			var info = document.getElementById("info");
+			info.innerHTML = "Bravo";
+			Numero = Numero + 1;
+			question(Numero);
+			window.document.calculatrice.affiche.value = "";
+		} else {
+		if (go == true && test.length < 3 && x == y){
+			var info = document.getElementById("info");
+			info.innerHTML = "Tu ne peut pas écrire le résultat directement";
+			window.document.calculatrice.affiche.value = "";
+		} else {	
+		if (go == true){
+			var info = document.getElementById("info");
+			info.innerHTML = "Faux";
+			window.document.calculatrice.affiche.value = "";
+		} else {
+		}}}
+	} else {
+		var info = document.getElementById("info");
+		info.innerHTML = "Tu dois au moins taper quelque chose";
+	}
+}
 
 /**
 * Permet d'ajouter le caractére de la touche souhaiter.
 * @return affiche la valeur voulue.
 */
- function ajouter(caracteres) {
-   window.document.calculatrice.affiche.value =
-   window.document.calculatrice.affiche.value + caracteres;
+function ajouter(caracteres) {
+	window.document.calculatrice.affiche.value =
+	window.document.calculatrice.affiche.value + caracteres;
 }
 
 function initialisation() {
+	var info = document.getElementById("info");
+	info.innerHTML = "";
 	if (go == false){
 		window.document.calculatrice.affiche.value = "";
 		document.getElementById("go").style.width = 140;
@@ -70,8 +81,14 @@ function initialisation() {
 		}
 		Numero = 1;
 		question(1);
-}}
+	}
+}
 
+function Effacer() {
+	window.document.calculatrice.affiche.value = "";
+	var info = document.getElementById("info");
+	info.innerHTML = "";
+}
 
 /**
 * Pose le problème pour chaque questions et bloque la ou les touches concernées.
@@ -370,6 +387,7 @@ function touches0() {
 */
 
 //Sera modifié en fonction des questions 
- function infos() {
-alert("A l'aide de la calculatrice et des touches disponibles, trouver la solution aux problémes posés");
+function infos() {
+	var info = document.getElementById("info");
+	info.innerHTML = "A l'aide de la calculatrice et des touches disponibles, trouver la solution aux problémes posés";
 }

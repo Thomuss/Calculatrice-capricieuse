@@ -1,6 +1,17 @@
 .QR {
+	position:relative;
+	margin-left: 500px;
+}
+
+.QRI{
+	position:relative;
+	margin-left: 500px;
+	top: 10px;
+}
+
+.calculatrice{
 	position:absolute;
-	left: 600px;
+	margin-left: 200px;
 }
 
 .button {
@@ -18,11 +29,6 @@
 	font-family:System,sans-serif;
 	border: 2px outset;
 	border-radius: 10px;
-}
-
-.calculatrice{
-	position:absolute;
-	left: 300px;
 }
 
 form{
@@ -48,7 +54,6 @@ body {
 }
 
 .quest{
-	height: 25px;
 	width: 500px;
 	text-align: center;
 	border: 2px #FFFFFF outset;
