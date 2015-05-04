@@ -55,7 +55,7 @@ body {
 
 .quest{
 	width: 500px;
-	text-align: center;
+	text-align: left;
 	border: 2px #FFFFFF outset;
 	border-radius: 1px;
 	background-color: transparent;

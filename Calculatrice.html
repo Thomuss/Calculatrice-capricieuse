@@ -5,7 +5,6 @@
 <meta http-equiv="Content-Language" content="fr" />
 <link href="calculatrice.css" rel="stylesheet" type="text/css" />
 <link rel="icon" type="image/png" href="icon.png" />
-<script type="text/javascript" src="calculatrice.js"></script>
 </head>
 
 <body>
@@ -17,6 +16,7 @@
 </tr><tr>
 <td class="td1">
 <table>
+<tr><p id="score"></p></tr>
 <tr>
 <td><input type="button" class="button" value="  ?  " onClick=infos();></td>
 <td colspan = "3"><input type="button" class="button" id="go" value="  Go  " onClick=initialisation();></td>
@@ -60,5 +60,8 @@
 		<div class="quest" id="info"></div>
 	</fieldset>
 </div>
+
+<script type="text/javascript" src="calculatrice.js"></script>
+
 </body>
 </html>
