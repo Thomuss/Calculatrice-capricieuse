@@ -1,14 +1,18 @@
 <html>
 <head>
+
 <title>Calculatrice capricieuse </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="fr" />
 <link href="calculatrice.css" rel="stylesheet" type="text/css" />
 <link rel="icon" type="image/png" href="icon.png" />
+<script type="text/javascript" src="calculatrice.js"></script>
+
 </head>
 
-<body>
-<div class="calculatrice"><form name="calculatrice" onSubmit="resultat();return false;">
+<body onload="infos()">
+
+<div class="calculatrice"><form name="calculatrice" onSubmit="resultat();">
 <table>
 <tr>
 <td>
@@ -17,6 +21,10 @@
 <td class="td1">
 <table>
 <tr><p id="score"></p></tr>
+<tr>
+<td><input type="button" id="bu15"  class="button" value="  (   " onClick=touches10();></td>
+<td><input type="button" id="bu16"  class="button" value="  )   " onClick=touches11();></td>
+</tr>
 <tr>
 <td><input type="button" class="button" value="  ?  " onClick=infos();></td>
 <td colspan = "3"><input type="button" class="button" id="go" value="  Go  " onClick=initialisation();></td>
@@ -60,8 +68,6 @@
 		<div class="quest" id="info"></div>
 	</fieldset>
 </div>
-
-<script type="text/javascript" src="calculatrice.js"></script>
 
 </body>
 </html>

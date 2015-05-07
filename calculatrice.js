@@ -1,16 +1,18 @@
 var y=0,
 	s=0,
+	b=0,
 	score = "Votre score est de ",
+	info = "Tu gagne 2 points par bonne réponse <br/>" + "(Plus ton calcule est long, plus tu gagne de points supplémentaires !) <br/>" + "Tu perd 0.5 point quand tu a faux",
 	go=false,
 	Numero = 1,
 	num = [];
-num.length = 15;
+num.length = 16;
 
 /**
 * Initialise les touches en leur donnant vrai (true) comme valeur.
 * @param k "true" dans toute les valeurs de la liste.
 */
-for (var k=1; k < 15; k++){
+for (var k=1; k < 17; k++){
 	num[k] = true;
 }
 
@@ -32,7 +34,8 @@ function resultat() {
 		window.document.calculatrice.affiche.value = x;
 		if (x == y && go==true && test.length > 2){
 			document.getElementById("info").innerHTML = "Bravo";
-			s=s+2;
+			var a = Math.round((test.length*0.5));
+			s = s+2+(a-(3*0.5))-(b*0.5);
 			document.getElementById("score").innerHTML = (score + s);
 			window.document.calculatrice.affiche.value = "";
 			Numero = Numero + 1;
@@ -50,28 +53,20 @@ function resultat() {
 		} else {
 		}}}
 	} else {
-		var info = document.getElementById("info");
-		info.innerHTML = "Tu dois au moins taper quelque chose";
 	}
 }
 
-/**
-* Permet d'ajouter le caractére de la touche souhaiter.
-* @return affiche la valeur voulue.
-*/
-function ajouter(caracteres) {
-	window.document.calculatrice.affiche.value =
-	window.document.calculatrice.affiche.value + caracteres;
-}
-
 function initialisation() {
-	document.getElementById("info").innerHTML = "";
+	document.getElementById("info").innerHTML = "Trouve à l'aide des touches disponibles, la solution aux problémes posés. <br/>" + info;
 	window.document.calculatrice.affiche.value = "";
 	for (var k=1; k < 15; k++){
 		document.getElementById('bu'+k).style.backgroundColor='#B1F773';
 		num[k] = true;
 	}
+	document.getElementById('bu15').style.backgroundColor='#FFDE00';
+	document.getElementById('bu16').style.backgroundColor='#FFDE00';
 	s = 0;
+	b = 0;
 	document.getElementById("score").innerHTML = (score + s)
 	Numero = 1;
 	question(Numero);
@@ -86,7 +81,12 @@ function initialisation() {
 
 function Effacer() {
 	window.document.calculatrice.affiche.value = "";
-	document.getElementById("info").innerHTML = "";
+	if (go == true){
+		document.getElementById("info").innerHTML = "Trouve à l'aide des touches disponibles, la solution aux problémes posés. <br/>" + info;
+		b = 0;
+	} else {
+		document.getElementById("info").innerHTML = "Aprés avoir appuyer sur GO, trouve à l'aide des touches disponibles, la solution aux problémes posés. <br/>" + info;
+	}
 }
 
 /**
@@ -378,32 +378,53 @@ function touches0() {
 	}
 }
 
+function touches10() {
+	if (num[15]==true){
+		b = b + 1;
+		window.document.calculatrice.affiche.value = 
+		window.document.calculatrice.affiche.value + "(";
+	} else {
+		window.document.calculatrice.affiche.value = 
+		window.document.calculatrice.affiche.value + "";
+	}
+}
+
+function touches11() {
+	if (num[16]==true){
+		window.document.calculatrice.affiche.value = 
+		window.document.calculatrice.affiche.value + ")";
+		b = b + 1;
+	} else {
+		window.document.calculatrice.affiche.value = 
+		window.document.calculatrice.affiche.value + "";
+	}
+}
+
 /**
 * Donne des informations sur le fonctionnement 
 * 
 */
 //Sera modifié en fonction des questions 
 function infos() {
-	document.getElementById("info").innerHTML = "Aprés avoir appuyer sur GO, trouve à l'aide des touches disponibles, la solution aux problémes posés. <br/>" +
-	"Tu gagne 2 points par bonne réponse <br/>" + "Tu perd 0.5 point quand tu a faux";
+	document.getElementById("info").innerHTML = "Aprés avoir appuyer sur GO, trouve à l'aide des touches disponibles, la solution aux problémes posés. <br/>" + info;
 	if (go == true){
 		if (Numero == 1){
-			document.getElementById("info").innerHTML = "Tu peut utiliser les chiffres 2 et 5";
+			document.getElementById("info").innerHTML = "<br/> Tu peut utiliser les chiffres 2 et 5";
 		} else {
 		if (Numero == 2){
-			document.getElementById("info").innerHTML = "Tu peut utiliser la soustraction ou la multiplication";
+			document.getElementById("info").innerHTML = "<br/> Tu peut utiliser la soustraction ou la multiplication";
 		} else {
 		if (Numero == 3){
-			document.getElementById("info").innerHTML = "Tu peut utiliser les chiffres 18 et 2";
+			document.getElementById("info").innerHTML = "<br/> Tu peut utiliser les chiffres 18 et 2";
 		} else {
 		if (Numero == 4){
-			document.getElementById("info").innerHTML = "Tu peut utiliser la soustraction avec le chiffre 20";
+			document.getElementById("info").innerHTML = "<br/> Tu peut utiliser la soustraction avec le chiffre 20";
 		} else {
 		if (Numero == 5){
-			document.getElementById("info").innerHTML = "Tu peut utiliser la soustraction avec le chiffre 20";
+			document.getElementById("info").innerHTML = "<br/> Tu peut utiliser la soustraction avec le chiffre 20";
 		} else {
 		if (Numero == 6){
-			document.getElementById("info").innerHTML = "Tu peut utiliser l'addition";
+			document.getElementById("info").innerHTML = "<br/>Tu peut utiliser l'addition";
 		} else {
 		}}}}}}
 	}
