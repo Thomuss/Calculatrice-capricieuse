@@ -1,13 +1,14 @@
 var y=0,
 	s=0,
 	prt=0,
-	score = "Votre score est de ",
-	info = "Plus ton calcule est complexe, plus tu gagne de points ! <br/>" + "Tu perd 1 point quand tu a faux",
+	score = "Ton score est de ",
+	info = "Plus ton calcule est long, plus tu gagne de points ! <br/> Attention, plus tu est lent et plus tu perd de points <br/> Tu perd 1 point quand tu a faux",
 	go=false,
 	Numero = 1,
 	verif=false,
 	zero=false,
-	num = [];
+	num = [],
+	tps=0;
 num.length = 16;
 
 /**
@@ -16,6 +17,14 @@ num.length = 16;
 */
 for (var k=1; k < 17; k++){
 	num[k] = true;
+}
+
+function temps() {
+	if (s>0) {
+		s = Math.round((s - 0.01)*100)/100;
+	} else {
+	}
+	document.getElementById("score").innerHTML = (score + s)
 }
 
 /**
@@ -38,7 +47,7 @@ function resultat() {
 		if (x == y && go==true && verif==true){
 			document.getElementById("info").innerHTML = "Bravo";
 			var a = Math.round((test.length*2));
-			s = s+a-(prt*2);
+			s = Math.round((s+a-(prt*2))*100)/100;
 			document.getElementById("score").innerHTML = (score + s);
 			window.document.calculatrice.affiche.value = "";
 			Numero = Numero + 1;
@@ -50,6 +59,10 @@ function resultat() {
 		} else {	
 		if (go == true){
 			document.getElementById("info").innerHTML = "Faux";
+			if (s>0) {
+				s=s-1;
+			} else {
+			}
 			s=s-1;
 			document.getElementById("score").innerHTML = (score + s);
 			window.document.calculatrice.affiche.value = "";
@@ -75,6 +88,7 @@ function initialisation() {
 	verif = false;
 	zero=false;
 	document.getElementById("score").innerHTML = (score + s)
+	tps=setInterval(function () {temps()}, 1000);
 	question();
 	if (go == false){
 		document.getElementById("go").style.width = 140;
@@ -181,6 +195,8 @@ function question() {
 		document.getElementById('bu7').style.backgroundColor='#B1F773';
 		document.getElementById("go").style.width = 60;
 		window.document.calculatrice.go.value = " Go ";
+		clearTimeout(tps);
+		document.getElementById("score").innerHTML = "";
 		go = false;
 		for (var k=1; k < 17; k++){
 			document.getElementById('bu'+k).style.backgroundColor='';
