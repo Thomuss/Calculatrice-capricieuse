@@ -136,66 +136,86 @@ function Effacer() {
 function question() {
 	if (Numero == 1){
 		document.getElementById("question").innerHTML = "Sachant que les touches + et - sont cassées : obtenir le nombre 1";
-		num[3]=false;
-		document.getElementById('bu3').style.backgroundColor='#DF0101';
+		num[10]=false;
+		document.getElementById('bu10').style.backgroundColor='#DF0101';
+		num[11]=false;
+		document.getElementById('bu11').style.backgroundColor='#DF0101';
 		y = 1;
 	} else {
 	if (Numero == 2){
 		document.getElementById("question").innerHTML = "Sachant que les touches *,/ et 3 sont cassées : obtenir le nombre 13";
-		num[10]=false;
-		document.getElementById('bu10').style.backgroundColor='#DF0101';
-		num[3]=true;
-		document.getElementById('bu3').style.backgroundColor='#B1F773';
+		num[3]=false;
+		document.getElementById('bu3').style.backgroundColor='#DF0101';
+		num[12]=false;
+		document.getElementById('bu12').style.backgroundColor='#DF0101';
+		num[13]=false;
+		document.getElementById('bu13').style.backgroundColor='#DF0101';
+		num[10]=true;
+		document.getElementById('bu10').style.backgroundColor='B1F773';
+		num[11]=true;
+		document.getElementById('bu11').style.backgroundColor='B1F773';
 		y = 13;
 	} else {
 	if (Numero == 3){
-		document.getElementById("question").innerHTML = "Sachant que les touches 5,x et + sont cassées : obtenir le nombre 25";
-		num[12]=false;
-		document.getElementById('bu12').style.backgroundColor='#DF0101';
-		num[11]=false;
-		document.getElementById('bu11').style.backgroundColor='#DF0101';
+		document.getElementById("question").innerHTML = "Sachant que les touches 5,* et + sont cassées : obtenir le nombre 25";
+		num[10]=false;
+		document.getElementById('bu10').style.backgroundColor='#DF0101';
 		num[5]=false;
 		document.getElementById('bu5').style.backgroundColor='#DF0101';
-		num[10]=true;
-		document.getElementById('bu10').style.backgroundColor='#B1F773';
+		num[3]=true;
+		document.getElementById('bu3').style.backgroundColor='#B1F773';
+		num[13]=true;
+		document.getElementById('bu13').style.backgroundColor='#B1F773';
 		y = 25;
 	} else {
 	if (Numero == 4){
 		document.getElementById("question").innerHTML = "Sachant que les touches 2,4,8,* et 0 sont cassées : obtenir le nombre 16";
-		num[3]=false;
-		document.getElementById('bu3').style.backgroundColor='#DF0101';
-		num[6]=false;
-		document.getElementById('bu6').style.backgroundColor='#DF0101';
-		num[12]=true;
-		document.getElementById('bu12').style.backgroundColor='#B1F773';
-		num[11]=true;
-		document.getElementById('bu11').style.backgroundColor='#B1F773';
+		num[2]=false;
+		document.getElementById('bu2').style.backgroundColor='#DF0101';
+		num[4]=false;
+		document.getElementById('bu4').style.backgroundColor='#DF0101';
+		num[8]=false;
+		document.getElementById('bu8').style.backgroundColor='#DF0101';
+		num[14]=false;
+		document.getElementById('bu14').style.backgroundColor='#DF0101';
+		num[10]=true;
+		document.getElementById('bu10').style.backgroundColor='#B1F773';
 		num[5]=true;
 		document.getElementById('bu5').style.backgroundColor='#B1F773';
 		y = 16;
 	} else {
 	if (Numero == 5){
 		document.getElementById("question").innerHTML = "Sachant que les touches *,-,+ et 3 sont cassées : obtenir le nombre 33";
-		num[12]=false;
-		document.getElementById('bu12').style.backgroundColor='#DF0101';
-		num[13]=false;
-		document.getElementById('bu13').style.backgroundColor='#DF0101';
-		num[3]=true;
-		document.getElementById('bu3').style.backgroundColor='#B1F773';
-		num[6]=true;
-		document.getElementById('bu6').style.backgroundColor='#B1F773';
+		num[10]=false;
+		document.getElementById('bu10').style.backgroundColor='#DF0101';
+		num[11]=false;
+		document.getElementById('bu11').style.backgroundColor='#DF0101';
+		num[3]=false;
+		document.getElementById('bu3').style.backgroundColor='#DF0101';
+		num[2]=true;
+		document.getElementById('bu2').style.backgroundColor='#B1F773';
+		num[4]=true;
+		document.getElementById('bu4').style.backgroundColor='#B1F773';
+		num[8]=true;
+		document.getElementById('bu8').style.backgroundColor='#B1F773';
+		num[14]=true;
+		document.getElementById('bu14').style.backgroundColor='#B1F773';
 		y = 33;
 	} else {
 	if (Numero == 6){
 		document.getElementById("question").innerHTML = "Sachant que les touches 8,/,2 et + sont cassées : obtenir le nombre 42";
-		num[12]=false;
-		document.getElementById('bu12').style.backgroundColor='#DF0101';
-		num[5]=false;
-		document.getElementById('bu5').style.backgroundColor='#DF0101';
-		num[7]=false;
-		document.getElementById('bu7').style.backgroundColor='#DF0101';
-		num[13]=true;
-		document.getElementById('bu13').style.backgroundColor='#B1F773';
+		num[13]=false;
+		document.getElementById('bu13').style.backgroundColor='#DF0101';
+		num[2]=false;
+		document.getElementById('bu2').style.backgroundColor='#DF0101';
+		num[8]=false;
+		document.getElementById('bu8').style.backgroundColor='#DF0101';
+		num[3]=true;
+		document.getElementById('bu3').style.backgroundColor='#B1F773';
+		num[11]=true;
+		document.getElementById('bu11').style.backgroundColor='#B1F773';
+		num[12]=true;
+		document.getElementById('bu12').style.backgroundColor='#B1F773';
 		y = 42;
 	} else {
 	if (Numero == 7){
@@ -204,57 +224,62 @@ function question() {
 		document.getElementById('bu12').style.backgroundColor='#DF0101';
 		num[5]=false;
 		document.getElementById('bu5').style.backgroundColor='#DF0101';
-		num[7]=false;
-		document.getElementById('bu7').style.backgroundColor='#DF0101';
+		num[11]=false;
+		document.getElementById('bu11').style.backgroundColor='#DF0101';
 		num[13]=true;
 		document.getElementById('bu13').style.backgroundColor='#B1F773';
+		num[2]=true;
+		document.getElementById('bu2').style.backgroundColor='#B1F773';
+		num[8]=true;
+		document.getElementById('bu8').style.backgroundColor='#B1F773';
 		y = 55;
 	} else {
 	if (Numero == 8){
 		document.getElementById("question").innerHTML = "Sachant que les touches +,- et 1 sont cassées : obtenir le nombre 1";
-		num[12]=false;
-		document.getElementById('bu12').style.backgroundColor='#DF0101';
-		num[5]=false;
-		document.getElementById('bu5').style.backgroundColor='#DF0101';
-		num[7]=false;
-		document.getElementById('bu7').style.backgroundColor='#DF0101';
-		num[13]=true;
-		document.getElementById('bu13').style.backgroundColor='#B1F773';
+		num[1]=false;
+		document.getElementById('bu1').style.backgroundColor='#DF0101';
+		num[5]=true;
+		document.getElementById('bu5').style.backgroundColor='#B1F773';
+		num[12]=true;
+		document.getElementById('bu12').style.backgroundColor='#B1F773';
 		y = 1;
 	} else {
 		if (Numero == 9){
 		document.getElementById("question").innerHTML = "Sachant que les touches +,-,/ et 0 sont cassées : obtenir le nombre 24";
-		num[12]=false;
-		document.getElementById('bu12').style.backgroundColor='#DF0101';
-		num[5]=false;
-		document.getElementById('bu5').style.backgroundColor='#DF0101';
-		num[7]=false;
-		document.getElementById('bu7').style.backgroundColor='#DF0101';
-		num[13]=true;
-		document.getElementById('bu13').style.backgroundColor='#B1F773';
+		num[13]=false;
+		document.getElementById('bu13').style.backgroundColor='#DF0101';
+		num[14]=false;
+		document.getElementById('bu14').style.backgroundColor='#DF0101';
+		num[1]=true;
+		document.getElementById('bu1').style.backgroundColor='#B1F773';
 		y = 24 ;
 	} else {
 	if (Numero == 10){
-		document.getElementById("question").innerHTML = "Sachant que les touches  6,0,+ et 1 sont cassées : obtenir le nombre 60";
-		num[12]=false;
-		document.getElementById('bu12').style.backgroundColor='#DF0101';
-		num[5]=false;
-		document.getElementById('bu5').style.backgroundColor='#DF0101';
-		num[7]=false;
-		document.getElementById('bu7').style.backgroundColor='#DF0101';
+		document.getElementById("question").innerHTML = "Sachant que les touches  6,0,+,- et 1 sont cassées : obtenir le nombre 60";
+		num[6]=false;
+		document.getElementById('bu6').style.backgroundColor='#DF0101';
+		num[1]=false;
+		document.getElementById('bu1').style.backgroundColor='#DF0101';
 		num[13]=true;
 		document.getElementById('bu13').style.backgroundColor='#B1F773';
+		num[11]=true;
+		document.getElementById('bu11').style.backgroundColor='#B1F773';
 		y = 60;
 	} else {
 	if (Numero > 10){
+		clearTimeout(tps);
 		document.getElementById("question").innerHTML = "Félicitation, tu as réussi toutes les questions. <br/>" + (score + s);
 		document.getElementById("info").innerHTML = "<br/> Tu as mis " + t + " secondes";
-		num[12]=true;
-		document.getElementById('bu12').style.backgroundColor='#B1F773';
-		num[5]=true;
-		document.getElementById('bu5').style.backgroundColor='#B1F773';
-		num[7]=true;
-		document.getElementById('bu7').style.backgroundColor='#B1F773';
+		num[6]=true;
+		document.getElementById('bu6').style.backgroundColor='#B1F773';
+		num[14]=true;
+		document.getElementById('bu14').style.backgroundColor='#B1F773';
+		num[1]=true;
+		document.getElementById('bu1').style.backgroundColor='#B1F773';
+		num[10]=true;
+		document.getElementById('bu10').style.backgroundColor='#B1F773';
+		num[11]=true;
+		document.getElementById('bu11').style.backgroundColor='#B1F773';
 		document.getElementById("go").style.width = 60;
 		window.document.calculatrice.go.value = " Go ";
 		clearTimeout(tps);
@@ -471,6 +496,10 @@ function touches0() {
 	}
 }
 
+/**
+* Bloque ou non la touche "("
+* @return true ou false
+*/
 function touches10() {
 	if (num[15]==true){
 		window.document.calculatrice.affiche.value = 
@@ -481,6 +510,10 @@ function touches10() {
 	}
 }
 
+/**
+* Bloque ou non la touche ")"
+* @return true ou false
+*/
 function touches11() {
 	if (num[16]==true){
 		window.document.calculatrice.affiche.value = 
@@ -492,61 +525,53 @@ function touches11() {
 }
 
 /**
-* Donne des informations sur le fonctionnement 
+* Aide l'utilisateur
 * @param Numero Correspond au numéro de la question
 */
 //Sera modifié en fonction des questions 
 function infos() {
 	if (go == true){
 		if (Numero == 1){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "1";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "1";
 		} else {
 		if (Numero == 2){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "9";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "9";
 		} else {
 		if (Numero == 3){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "50";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "50";
 		} else {
 		if (Numero == 4){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "27";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "27";
 		} else {
 		if (Numero == 5){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "66";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "66";
 		} else {
 		if (Numero == 6){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "7";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "7";
 		} else {
 		if (Numero == 7){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "110";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "110";
 		} else {
 		if (Numero == 8){
+			document.getElementById("info").innerHTML = "Tu peut utiliser la division";
 		} else {
 		if (Numero == 9){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "7";
 		} else {
 		if (Numero == 10){
-		window.document.calculatrice.affiche.value = 
-		window.document.calculatrice.affiche.value + "";
-		s=s-1;
+			window.document.calculatrice.affiche.value = 
+			window.document.calculatrice.affiche.value + "(3*4)";
 		} else {
 		}}}}}}}}}}
-		} else {
+	} else {
 		document.getElementById("question").innerHTML = "Aprés avoir appuyer sur GO, trouve à l'aide des touches disponibles, la solution aux problémes posés. <br/>";
 	}
 }
