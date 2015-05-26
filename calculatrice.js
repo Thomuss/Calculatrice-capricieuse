@@ -1,7 +1,7 @@
 var y=0,
 	s=0,
 	score = "Ton score est de ",
-	info = "Tu gagne 2 points par bonne réponse <br/> Attention, tu perd 1 point quand tu a faux ou quand tu utilise l'aide !",
+	info = "Tu gagne 3 points par bonne réponse <br/> Attention, tu perd 1 point quand tu a faux !",
 	go=false,
 	Numero = 1,
 	verif=false,
@@ -50,7 +50,7 @@ function resultat() {
 		window.document.calculatrice.affiche.value = x;
 		if (x == y && go==true && verif==true){
 			document.getElementById("info").innerHTML = "Bravo";
-			s = s+5;
+			s = s+3;
 			document.getElementById("score").innerHTML = (score + s);
 			window.document.calculatrice.affiche.value = "";
 			Numero = Numero + 1;
@@ -269,7 +269,7 @@ function question() {
 	if (Numero > 10){
 		clearTimeout(tps);
 		document.getElementById("question").innerHTML = "Félicitation, tu as réussi toutes les questions. <br/>" + (score + s);
-		document.getElementById("info").innerHTML = "<br/> Tu as mis " + t + " secondes";
+		document.getElementById("info").innerHTML = "Tu as mis " + t + " secondes";
 		num[6]=true;
 		document.getElementById('bu6').style.backgroundColor='#B1F773';
 		num[14]=true;
@@ -528,7 +528,6 @@ function touches11() {
 * Aide l'utilisateur
 * @param Numero Correspond au numéro de la question
 */
-//Sera modifié en fonction des questions 
 function infos() {
 	if (go == true){
 		if (Numero == 1){
@@ -545,7 +544,7 @@ function infos() {
 		} else {
 		if (Numero == 4){
 			window.document.calculatrice.affiche.value = 
-			window.document.calculatrice.affiche.value + "27";
+			window.document.calculatrice.affiche.value + "13";
 		} else {
 		if (Numero == 5){
 			window.document.calculatrice.affiche.value = 
@@ -564,7 +563,7 @@ function infos() {
 		} else {
 		if (Numero == 9){
 			window.document.calculatrice.affiche.value = 
-			window.document.calculatrice.affiche.value + "7";
+			window.document.calculatrice.affiche.value + "8";
 		} else {
 		if (Numero == 10){
 			window.document.calculatrice.affiche.value = 
